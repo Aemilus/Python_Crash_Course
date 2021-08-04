@@ -9,3 +9,6 @@ Repository for practicing exercises from book _Python Crash Course_ by Eric Matt
 ### 05 - `if` Statements
 ### 06 - Dictionaries
 ### 07 - User Input and `while` Loops
+### 08 - Functions
+### 09 - Classes
+### 10 - Files and Exceptions

@@ -1,0 +1,7 @@
+    I would like to thank the author for this wonderful Python book.
+Each concept related to Python has been presented with simplicity, and it
+feels so natural to study.
+    These Python exercises are well-chosen and
+are meant to make you apply what you learned so far,
+but it also makes you put a bit of your imagination
+- thus making the implementation with Python to have a personal Python touch.

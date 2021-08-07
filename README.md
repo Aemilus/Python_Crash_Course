@@ -14,3 +14,8 @@ Repository for practicing exercises from book _Python Crash Course_ by Eric Matt
 #### [09](./Project/09/) - Classes
 #### [10](./Project/10/) - Files and Exceptions
 #### [11](./Project/11/) - Testing Your Code
+
+### Part II: Projects
+#### [Project 1](./Project/project01/) - Alien Invasion
+#### [Project 2](./Project/project02/) - Data Visualization
+#### [Project 3](./Project/project03/) - Web Applications

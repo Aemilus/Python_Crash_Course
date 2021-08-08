@@ -10,7 +10,7 @@ class Ship:
         self.ai_settings = ai_settings
 
         # load the ship image and get it's rectangle
-        self.image = pygame.image.load("images/small_rocket.png")
+        self.image = pygame.image.load("images/rocket.png")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 

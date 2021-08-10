@@ -1,3 +1,6 @@
+from game_sounds import LevelUpSound
+
+
 class Settings:
     """Game settings."""
 
@@ -7,6 +10,8 @@ class Settings:
         self.screen_height = 600
         self.screen_width = 1000
         self.bg_color = (10, 20, 50)
+        # sound settings
+        self.level_up_sound = LevelUpSound()
         # ship settings
         self.ship_limit = 3
         # bullet settings

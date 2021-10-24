@@ -1,0 +1,16 @@
+!Project
+!Project/*
+!README.md
+/Project/10/10-03/guest.txt
+/Project/10/10-04/guest_book.txt
+/Project/10/10-05/reasons.txt
+/Project/10/10-11/favorite_number.txt
+/Project/10/10-12/favorite_number.txt
+/Project/10/10-13/username.json
+!Project/project03/learning_log/ll_env/pyvenv.cfg
+/Project/project03/learning_log/ll_env/
+!Project/project03/18-04/pizzeria/pizzeria_venv/pyvenv.cfg
+/Project/project03/18-04/pizzeria/pizzeria_venv/
+!Project/project03/18-05/meal_planner/mp_venv/pyvenv.cfg
+/Project/project03/18-05/meal_planner/mp_venv/
+.idea/

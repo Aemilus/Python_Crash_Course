@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+  <p>
+      <a href="{% url 'pizzas:index' %}">Pizzeria</a>
+      <a href="{% url 'pizzas:pizzas' %}">Pizzas</a>
+  </p>
+  {% block content %}{% endblock content %}
+</body>
+</html>

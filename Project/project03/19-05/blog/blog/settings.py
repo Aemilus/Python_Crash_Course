@@ -31,15 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # order of apps matters; for example the logout page will work differently (compare with 19-02)
+    # my apps
+    'blogs',
+    'users',
+    # default django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # my apps
-    'blogs',
-    'users',
 ]
 
 MIDDLEWARE = [

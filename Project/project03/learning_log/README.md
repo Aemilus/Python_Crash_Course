@@ -14,3 +14,10 @@ Function prompt {"CMD "}
 python manage.py runserver
 ```
 5. Browse to http://localhost:8000
+
+### Accounts
+```
+ll_admin / admin
+testuser / django..
+testuser2 / django2..
+```

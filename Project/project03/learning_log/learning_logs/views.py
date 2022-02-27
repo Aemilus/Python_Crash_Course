@@ -17,6 +17,7 @@ def index(request):
 @login_required
 def topics(request):
     """Show all topics."""
+    # noinspection PyUnresolvedReferences
     my_topics = Topic.objects.filter(owner=request.user).order_by('date_added')
     context = {'topics': my_topics}
     return render(request, 'learning_logs/topics.html', context)
@@ -25,6 +26,7 @@ def topics(request):
 @login_required
 def topic(request, topic_id):
     """Show a single topic identified by id and all its entries."""
+    # noinspection PyUnresolvedReferences
     my_topic = Topic.objects.get(id=topic_id)
     # verify topic belongs to current user
     if my_topic.owner != request.user:
@@ -58,6 +60,7 @@ def new_topic(request):
 @login_required
 def new_entry(request, topic_id):
     """Add a new entry on a specific topic."""
+    # noinspection PyUnresolvedReferences
     my_topic = Topic.objects.get(id=topic_id)
 
     if request.method != 'POST':
@@ -79,6 +82,7 @@ def new_entry(request, topic_id):
 @login_required
 def edit_entry(request, entry_id):
     """Edit an existing entry."""
+    # noinspection PyUnresolvedReferences
     my_entry = Entry.objects.get(id=entry_id)
     my_topic = my_entry.topic
     if my_topic.owner != request.user:

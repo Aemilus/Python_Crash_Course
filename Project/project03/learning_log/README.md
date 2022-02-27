@@ -12,7 +12,7 @@ Function prompt {"CMD "}
 ```
 .\ll_env\Scripts\activate
 ```
-- if you need to recreate the venv then
+- if you need to recreate the venv then (also check _requirements.txt_)
 ```
 python -m venv ll_env
 .\ll_env\Scripts\activate

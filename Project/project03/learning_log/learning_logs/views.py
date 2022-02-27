@@ -9,6 +9,12 @@ from .forms import TopicForm, EntryForm
 # Create your views here.
 
 
+def __check_topic_owner(_topic, _request):
+    # verify topic belongs to current user
+    if _topic.owner != _request.user:
+        raise Http404
+
+
 def index(request):
     """The home page for Learning Logs."""
     return render(request, 'learning_logs/index.html')
@@ -28,9 +34,7 @@ def topic(request, topic_id):
     """Show a single topic identified by id and all its entries."""
     # noinspection PyUnresolvedReferences
     my_topic = Topic.objects.get(id=topic_id)
-    # verify topic belongs to current user
-    if my_topic.owner != request.user:
-        raise Http404
+    __check_topic_owner(my_topic, request)
     # the minus sign in front of date_added sorts the results in reverse order,
     # which will display the most recent entries first
     entries = my_topic.entry_set.order_by('-date_added')
@@ -85,8 +89,7 @@ def edit_entry(request, entry_id):
     # noinspection PyUnresolvedReferences
     my_entry = Entry.objects.get(id=entry_id)
     my_topic = my_entry.topic
-    if my_topic.owner != request.user:
-        raise Http404
+    __check_topic_owner(my_topic, request)
 
     if request.method != 'POST':
         # initial request; pre-fill form with current entry in database

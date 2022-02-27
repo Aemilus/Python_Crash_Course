@@ -66,6 +66,7 @@ def new_entry(request, topic_id):
     """Add a new entry on a specific topic."""
     # noinspection PyUnresolvedReferences
     my_topic = Topic.objects.get(id=topic_id)
+    __check_topic_owner(my_topic, request)
 
     if request.method != 'POST':
         # no data submitted; create a blank form

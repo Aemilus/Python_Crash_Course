@@ -8,7 +8,10 @@
 
     <ul>
         {% for post in blog_posts %}
-            <li>{{ post }}</li>
+            <li>
+                <p>{{ post }}</p>
+                <p><a href="{% url 'blogs:edit_post' post.id %}">Edit post</a></p>
+            </li>
         {% empty %}
             <li>No posts available.</li>
         {% endfor %}

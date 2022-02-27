@@ -8,8 +8,8 @@ from .forms import BlogPostForm
 
 def index(request):
     """The home page for blogs."""
-    blog_posts = BlogPost.objects.order_by('date_added')
-    context = {'blog_posts': blog_posts}
+    my_posts = BlogPost.objects.order_by('date_added')
+    context = {'blog_posts': my_posts}
     return render(request, 'blogs/index.html', context)
 
 
@@ -28,6 +28,18 @@ def new_post(request):
     return render(request, 'blogs/new_post.html', context)
 
 
-# def edit_post(request, post_id):
-#     """Edit an existing blog post."""
-#     blog_post = BlogPost.objects.get(id=post_id)
+def edit_post(request, post_id):
+    """Edit an existing blog post."""
+    my_post = BlogPost.objects.get(id=post_id)
+    if request.method != 'POST':
+        # pre-fill form with my_post
+        my_form = BlogPostForm(instance=my_post)
+    else:
+        # save edited blog post
+        my_form = BlogPostForm(instance=my_post, data=request.POST)
+        if my_form.is_valid():
+            my_form.save()
+            return redirect('blogs:index')
+
+    context = {'post': my_post, 'form': my_form}
+    return render(request, 'blogs/edit_post.html', context)
